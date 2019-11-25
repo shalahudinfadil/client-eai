@@ -12,11 +12,7 @@ class ClientController extends Controller
 
     public function __construct()
     {
-<<<<<<< HEAD
-      $this->client = new Client(['base_uri' => 'http://consultant-eai.herokuapp.com/api']);
-=======
       $this->client = new Client(['base_uri' => 'http://consultant-eai.herokuapp.com/api/']);
->>>>>>> 546738c8fbbc92b32659878a325eb46669d5aa03
     }
 
     public function dashboard()
