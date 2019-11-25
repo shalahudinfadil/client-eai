@@ -94,7 +94,7 @@ class ClientController extends Controller
 
       $resp = json_decode((string)$req->getBody());
 
-      return $resp->data;
+      return redirect('/ticket')->with('status',$resp->data);
     }
 
     public function postTicket(Request $request)

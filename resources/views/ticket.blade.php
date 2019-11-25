@@ -14,6 +14,14 @@
         </a>
       </div>
       <div class="col-md-12 pt-3 pr-2 text-center">
+        @if (session('status'))
+          <div class="alert alert-primary alert-dismissible fade show" role="alert">
+            {{session('status')}}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+        @endif
         <div class="form-group">
           <select class="form-control" id="filter">
             <option value="1" selected>All Tickets</option>
