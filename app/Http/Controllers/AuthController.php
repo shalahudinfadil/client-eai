@@ -11,7 +11,7 @@ class AuthController extends Controller
 
   public function __construct()
   {
-    $this->client = new Client(['base_uri' => 'http://consultant-eai.herokuapp.com/api/']);
+    $this->client = new Client(['base_uri' => 'http://localhost:8000/api/']);
   }
 
   public function welcome()

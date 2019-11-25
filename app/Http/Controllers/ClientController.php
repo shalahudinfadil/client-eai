@@ -12,7 +12,7 @@ class ClientController extends Controller
 
     public function __construct()
     {
-      $this->client = new Client(['base_uri' => 'http://consultant-eai.herokuapp.com/api/']);
+      $this->client = new Client(['base_uri' => 'http://consultant-eai.herokuapp.com/api']);
     }
 
     public function dashboard()
@@ -141,7 +141,7 @@ class ClientController extends Controller
           $cloudder = [\Cloudder::getPublicId()];
         }
         $multipart[] = [
-          'name' => 'images',
+          'name' => 'img_links',
           'contents' => json_encode($cloudder),
         ];
       }
@@ -152,7 +152,7 @@ class ClientController extends Controller
 
       $resp = json_decode((string)$req->getBody());
 
-      return redirect('/ticket');
+      return $resp->success;
 
     }
 
